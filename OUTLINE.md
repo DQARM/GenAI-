@@ -21,8 +21,9 @@
 - 用魔法打敗魔法，AI做的叫AI改
 - 軟體工程輔助AI,AI輔助軟體工程
 - 沒變:還是要先問「我們要驗證什麼風險」,再決定測什麼;驗收條件仍是測試根本依據。
+- 偵測門被打開的軟體，正確率99.999%，結果一整晚誤報門被打開二次，讓客戶沒睡好，更慘的是門被打開沒偵測到。
 - GenAI 加速「想案例、寫案例」,但不決定「什麼才算對」。
-  -Human-in-the-Loop and Human-on-the-Loop
+  -Human-in-the-Loop / Human-on-the-Loop / Human-out-of-the-Loop
 - 幫不上 / 會誤導的地方:可能自信地給錯答案(幻覺),人要做最後判斷;它不知道公司內部真實情境,給的案例可能不貼合。
 - 全測一遍，在AI Coding時代不是線性成長，而是雪崩
 
@@ -58,7 +59,7 @@
 
 ## 第 4 章:迴歸測試策略
 - DevOps
-- DevSecOps 已死?
+- DevSecOps/SSDLC
 - 傳統迴歸策略
 - AI時代的迴歸策略
 - Code Review: 
