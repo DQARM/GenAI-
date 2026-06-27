@@ -4,13 +4,31 @@
 ```
 16:9 2K 「生成一張清晰、專業的教育資訊圖，說明四種 AI 與軟體測試方法之間的關係：對抗性測試、模糊測試、性質測試、變形測試。 
 中央用一個大圓標註『對抗性測試（Adversarial Testing）』作為核心目標。周圍環繞三個圓形：模糊測試、性質測試、變形測試。 
-用箭頭標示關係： 模糊測試指向對抗性測試的粗箭頭，標註『常用實現方式』 模糊測試與性質測試之間雙向箭頭，標註『高度互補』 性質測試和變形測試指向對抗性測試，標註『可輔助使用』 
+用箭頭標示關係： 
+模糊測試指向對抗性測試的粗箭頭，標註『常用實現方式』
+模糊測試與性質測試之間雙向箭頭，標註『高度互補』 
+性質測試和變形測試指向對抗性測試，標註『可輔助使用』 
 使用維恩圖風格顯示重疊區域 加入代表圖示： 對抗性測試：破裂的盾牌 + 紅色攻擊箭頭 
 模糊測試：隨機數據粒子與混亂符號 
 性質測試：檢查清單與不變量符號 
 變形測試：輸入變形成新輸入的轉換箭頭 
 上方標題：『AI 測試方法關係圖』 每個圓形下方加上簡短中文說明。使用現代扁平設計，藍綠色調，乾淨易讀，像教科書插圖風格，高解析度。」
 ```
-<img width="3840" height="2160" alt="四種測試關係圖" src="https://github.com/user-attachments/assets/4f292ea5-4ac1-4d58-b8be-6957a882bda8" />  
+<img width="960" height="540" alt="四種測試關係圖" src="https://github.com/user-attachments/assets/4f292ea5-4ac1-4d58-b8be-6957a882bda8" />  
 
-
+```
+生成一張 16:9、4K、高解析度 的資訊圖表插畫，主題是 Adversarial Testing（對抗性測試 / 敵對測試），風格專業、現代、適合教學簡報。 
+畫面核心要表達： 
+功能測試問「系統會不會做對的事？」；對抗性測試問「系統會不會被騙去做錯的事？」 
+畫面採左右對照： 
+左側是 Functional Testing 功能測試： 正常使用者、標準流程、綠色勾勾、Happy Path、測試通過。 
+文字重點： 「照規矩操作，結果對不對？」 「關注 correctness」 「驗證正常路徑」 
+右側是 Adversarial Testing 對抗性測試： 駭客 / 紅隊 / 惡意使用者，輸入異常資料、攻擊 payload、繞過驗證、讓系統出錯。 
+文字重點： 「不照規矩操作，系統會不會崩？」 「會不會洩漏不該吐出的資訊？」 「會不會被誘導做出未授權行為？」 「關注 robustness 與 security」 
+下方加入三個小區塊，呈現三種應用場景： 傳統軟體 / 資安：fuzzing、SQLi、XSS、command injection、繞過驗證 
+ML 模型：熊貓圖片被微小雜訊誤判、adversarial examples、data poisoning、model extraction 
+GenAI / LLM：jailbreak、prompt injection、system prompt 洩漏、guardrail bypass、red teaming 
+畫面中加入「全綠的陷阱」概念： 一排測試全綠，但旁邊仍藏著紅色漏洞與未知風險。 強調：測試全過，不代表系統對未知輸入是安全的。 
+整體配色使用科技感藍、深灰、白色，攻擊與風險用紅色 / 橘色強調。畫面清楚、有層次、文字可讀、適合放進內訓教材。
+```
+<img width="960" height="540" alt="功能測試_對抗性測試" src="https://github.com/user-attachments/assets/660fd185-3ff4-4120-94aa-d4c3ea69da4f" />  
