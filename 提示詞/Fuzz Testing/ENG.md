@@ -13,3 +13,5 @@ At the bottom, show famous tools icons (AFL, libFuzzer) and a "Bug Found!" badge
 
 Style: modern infographic, flat design with some 3D elements, vibrant colors, clean lines, educational diagram style like Apple or Google developer illustrations, highly detailed, clear labels in English, cinematic lighting, 16:9 aspect ratio.
 ```
+
+<img width="1536" height="1024" alt="OpenAI Playground 2026-06-27 at 22 28 06" src="https://github.com/user-attachments/assets/fc4adbf0-1d0f-46c9-9a6f-a32486e64755" />
