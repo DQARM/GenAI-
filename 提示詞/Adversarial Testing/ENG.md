@@ -18,3 +18,5 @@ Metamorphic Testing: transformation arrows (input → deformed input)
 Add a title at the top: 'Relationships Between Testing Methods in AI Safety'
 Below each circle, add a short description in clean text. Use modern flat design, blue and green color scheme, clear hierarchy, labels in English with Chinese translation in smaller font. Clean background, highly readable, educational style like a textbook illustration."
 ```
+
+<img width="1536" height="1024" alt="OpenAI Playground 2026-06-27 at 20 41 22" src="https://github.com/user-attachments/assets/fbdea8d8-0e58-4afd-8c66-b3ee46a8d535" />
