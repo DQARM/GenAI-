@@ -140,3 +140,4 @@
 - 軟體工程輔助AI,AI輔助軟體工程
 - Human-in-the-Loop / Human-on-the-Loop / Human-out-of-the-Loop
 - 寫作之難，在於把網狀的思考，用樹狀結構，展現在線性展開的語句裡。
+- GSD + Superpowers + gstack (https://aiprohunter.com/zh/blog/comparison/superpowers-vs-gstack-vs-gsd)
