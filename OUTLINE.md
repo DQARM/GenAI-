@@ -156,6 +156,7 @@
 ## 第 6 章:實做
 ### 前面講了一大堆，怎麼知道是紙上談兵，或是真的可以實做
 - 業界實例 — META JIT
+- JIT.PNG
 - GATF (Governance-Aware Autonomous Testing Framework)
 - gstack (https://github.com/garrytan/gstack)
 
