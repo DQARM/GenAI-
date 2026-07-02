@@ -19,6 +19,7 @@
 - 測試的第一性原理：風險管理
 - GenAI什麼沒變:還是要先問「我們要驗證什麼風險」,再決定測什麼;驗收條件仍是測試根本依據。
 - 偵測門被打開的軟體，正確率99.999%，結果一整晚誤報門被打開二次，讓客戶沒睡好，更慘的是門被打開沒偵測到。
+
 ### GenAI時代下的SWOT
 ### Gen時代，什麼變了: 測試管理的挑戰
 - 1. 開發速度變快，測試節奏被壓縮
@@ -36,6 +37,10 @@
 ### GenAI 加速「想案例、寫案例」,但不決定「什麼才算對」。
 - 幫不上 / 會誤導的地方:可能自信地給錯答案(幻覺),人要做最後判斷;它不知道公司內部真實情境,給的案例可能不貼合。
 - 重要決策還是要人來做: Huamn-in-the-Loop
+###怎麼做？
+- 用魔法打敗魔法
+- AI寫的CODE,用另一個AI寫Test Case 來測。
+- AI寫的Code，用AI/Machine Learning找到最容易改壞的部分
 
 
 ## 第 2 章:GenAI 時代，軟體工程不是過時，而是變得更重要
@@ -151,12 +156,19 @@
   - 修復方式：人類修/ AI修+人審/ 純AI (高風險)
   - 驗證等級：L1 自動化 -> L4安全審查
 - 修好不一定修對
+### 我們可以從哪開始
+- 至少先在Issue留下AI可以分析的線索
+- 難度最低：這個功能是不是AI寫的?? 至少留下這個線索。
+- 難度最高：這個功能是哪個AI的哪個模型的哪個難度寫的??
 
 
 ## 第 6 章:實做
 ### 前面講了一大堆，怎麼知道是紙上談兵，或是真的可以實做
-- 業界實例 — META JIT
-- JIT.PNG
+- 業界實例: META JIT: Launchable: GATF: gstack
+  - Meta JIT
+  - JIT.PNG
+- Launchable
+  -- Launcable.PNG
 - GATF (Governance-Aware Autonomous Testing Framework)
 - gstack (https://github.com/garrytan/gstack)
 
