@@ -276,7 +276,6 @@ Trace Agent 執行流程
 版本比較與人工回饋
 Production Monitoring
 建立完整可追溯紀錄
-下方：組合成類似 GATF 的流程
 
 最下方：重點結論
 
