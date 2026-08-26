@@ -1,0 +1,728 @@
+# GenAI 時代下，測試需要管理的新風險｜圖片生成 Prompt
+
+請製作一張 **16:9、4K、企業級簡報風格的橫向資訊圖表／風險心智圖**，主題為：
+
+# **GenAI 時代下，測試需要管理的新風險**
+
+整體視覺風格參考大型科技公司、資安公司、顧問公司的高階簡報，例如 Microsoft、IBM、Cisco、McKinsey、Deloitte 的技術架構與風險治理圖。
+
+背景使用 **純白或極淺灰白色**，大量留白，資訊密度高但必須清楚、有秩序。使用：
+
+- 細線
+- 圓角矩形
+- 扁平化 Vector Icon
+- 色彩編碼
+- 清楚層級
+- 左 → 右閱讀動線
+- 顧問式 Infographic Layout
+- 高解析、銳利文字
+- 不要 3D
+- 不要照片
+- 不要卡通風格
+
+文字以 **繁體中文為主，搭配英文技術名詞**。
+
+所有文字必須清楚可讀，禁止：
+
+- 簡體中文
+- 亂碼
+- 拼字錯誤
+- 任意改寫技術名詞
+
+---
+
+# 一、整體畫面配置
+
+整張圖分成五大區域：
+
+1. **左上：Scope 範圍**
+2. **左側中央：深藍色主題節點**
+3. **中央：約 65～70% 畫面，7 類 GenAI Testing Risk**
+4. **右側：紅色 Common-Mode Failure 重點說明**
+5. **底部：核心結論 + Provenance 完整追溯鏈**
+
+畫面整體像一張大型企業簡報中的「風險全景圖」。
+
+---
+
+# 二、左上角：Scope
+
+左上角放置一個：
+
+- 白底
+- 深藍色虛線框
+- 圓角矩形
+- 左上有 Target / Bullseye Icon
+
+文字：
+
+**Scope：本圖討論的是**
+**「GenAI 參與 Software**
+**Development / Testing」**
+**所產生的風險，而非**
+**AI-based Product 本身的**
+**Model Risk。**
+
+字體使用深藍或黑色。
+
+---
+
+# 三、左側中央：主題節點
+
+左側約 15%～18% 寬度放置一個大型深藍色圓角矩形。
+
+背景：
+
+**Dark Navy Blue**
+
+白色大標題：
+
+# \*\*GenAI 時代下，
+
+測試需要管理的新風險\*\*
+
+中間加入細白色分隔線。
+
+下方文字：
+
+**測試的重要目的之一：**
+**識別、降低並持續管理產品風險**
+
+由此主節點向右延伸多條彩色曲線，連接 7 個主要風險分類。
+
+---
+
+# 四、主畫面新增重要觀點
+
+在左側主題節點下方或中央左側空白區，加入一個：
+
+- 紅色虛線圓角矩形
+- 白色背景
+- 紅色星號 ★
+- 紅色重點字
+
+文字：
+
+# \*\*★ GenAI 帶來的不只是
+
+New Risk，
+也會 Amplify Existing Risk。\*\*
+
+此區塊要醒目，但不要搶過主標題。
+
+---
+
+# 五、中央：7 類主要風險
+
+採用大型橫向 Mind Map / Risk Taxonomy。
+
+每類包含：
+
+- 左側彩色圓形數字
+- 中文大標題
+- 英文副標
+- 右側展開多個風險項目
+- 每項使用細框線與對應顏色
+- 左邊為風險名稱
+- 右邊為簡短解釋與例子
+
+---
+
+# 1. 需求、知識與 Context 風險
+
+使用 **藍色 Blue**。
+
+標題：
+
+**需求、知識與 Context 風險**
+
+英文：
+
+**Requirement, Knowledge & Context Risks**
+
+包含：
+
+### 1. 規格不明確、AI 自行補充需求
+
+右側說明：
+
+**需求模糊、矛盾或遺漏時，AI 可能自行推測並補全，最終偏離真正需求。**
+
+---
+
+### 2. AI 不知道的事情，也可能直接給答案
+
+右側說明：
+
+**原本應該回答「我不知道」，AI 仍可能產生看似合理的 Content / Code / Test。**
+
+---
+
+### 3. AI 使用的 Context 可能已過期、錯誤或互相矛盾
+
+右側加入：
+
+**錯誤 Requirement、過時文件、錯誤註解、舊 API Example、舊版 RAG 資料，都可能被 AI 當成事實。**
+
+底部強調：
+
+**Garbage Context → Plausible but Wrong Output**
+
+---
+
+# 2. 程式碼實作與安全風險
+
+使用 **綠色 Green**。
+
+標題：
+
+**程式碼實作與安全風險**
+
+英文：
+
+**Implementation & Security Risks**
+
+包含：
+
+### 1. AI 可能產生「看起來對，實際不對」的程式碼
+
+右側列出：
+
+**Boundary Error、Exception Handling 遺漏、Race Condition、Business Logic 錯誤、Hard Bug 等 Functional Risk。**
+
+---
+
+### 2. Functionally Correct ≠ Secure
+
+中文補充：
+
+**功能正確 ≠ 足夠安全**
+
+右側：
+
+**Authentication、Authorization、Injection、Secret、TLS、Input Validation、敏感資料相關問題，都可能被忽略。**
+
+---
+
+### 3. 黑箱狂喜：會寫 ≠ 代表就能信賴
+
+右側：
+
+**Unit / E2E Test 通過，不代表 Integration、Performance、Configuration、Reliability、Distributed System 或 Non-functional Requirement 都正確。**
+
+---
+
+# 3. 相依套件與供應鏈風險
+
+使用 **橘色 Orange**。
+
+標題：
+
+**相依套件與供應鏈風險**
+
+英文：
+
+**Dependency & Supply Chain Risks**
+
+包含：
+
+### 1. AI 可能引用錯誤、過時或不安全的 Dependency
+
+說明：
+
+**可能引用不存在、已棄用、版本不相容，或存在已知 CVE 的套件。**
+
+---
+
+### 2. 套件搶註風險（Slopsquatting）
+
+說明：
+
+**攻擊者可能註冊 AI 容易推薦或幻想出的套件名稱，誘使開發者安裝惡意 Dependency。**
+
+---
+
+# 4. 測試設計與 Oracle 風險
+
+使用 **鮮紅色 Red**。
+
+這個區域是整張圖最重要的中央區域，尺寸比其他分類略大。
+
+標題：
+
+# **測試設計與 Oracle 風險**
+
+英文：
+
+**Testing & Oracle Risks**
+
+包含 7 項：
+
+---
+
+### 1. AI 可能顯得很有道理，寫出「全部錯誤」的 Test Case
+
+說明：
+
+**AI 會根據 Implementation 與過去 Expected Result 產生測試案例，結果可能全部能執行、全部通過，但假設本身就是錯的。**
+
+---
+
+### 2. Code 與 Test 都由同一個 AI 產生，可能形成同源錯誤
+
+說明：
+
+**共享相同資料來源與推理偏誤，可能形成 Code 與 Test 一致但錯誤的 Common-Mode Failure。**
+
+---
+
+### 3. AI 可能產生錯誤的 Test Oracle / Expected Result
+
+說明：
+
+**AI 不只會產生 Test Case，也可能產生錯誤 Expected Result。**
+
+強調：
+
+**Code + Test + Expected Result 都可能同時錯。**
+
+---
+
+### 4. AI 可能產生「幾乎不會 Fail」的 Test Case
+
+列出：
+
+**Assertion 太弱、過度使用 Mock、不檢查真正期望結果，導致測試看似通過但沒有抓到風險。**
+
+---
+
+### 5. AI 可以產生大量 Test Case，但不代表風險有被覆蓋
+
+說明：
+
+**形式 Coverage 很高，不代表 Critical Risk、Business Risk、Boundary 或真正重要邏輯已被覆蓋。**
+
+---
+
+### 6. AI 造成 Test Case Inflation 與 Test Debt
+
+說明：
+
+**大量相似、冗長、低價值 Test Case 堆積，造成 Review 與 Maintenance Cost 上升。**
+
+加入：
+
+**Low Signal-to-Noise Ratio**
+
+---
+
+### 7. AI 可能針對既有 Test 過度擬合
+
+英文：
+
+**Test Overfitting**
+
+說明：
+
+**當 AI 同時看到 Implementation 與 Test，它可能最佳化的是「讓 Test Pass」，而不是「滿足 Requirement」。**
+
+底部強調：
+
+# **Pass the Test ≠ Satisfy the Requirement**
+
+---
+
+# 六、右側大型重點框：Common-Mode Failure
+
+畫面最右側放置一個大型：
+
+- 白色底
+- 紅色粗邊框
+- 圓角矩形
+- 約占畫面寬度 17%～20%
+
+頂部紅色大標題：
+
+# **Common-Mode Failure**
+
+中文：
+
+# **（同源錯誤 / 共敗失效）**
+
+內文：
+
+**同一個 AI 產生來自於**
+**Requirement Interpretation → Code → Test → Expected Result，**
+**被全部牽引，**
+**共享同一個錯誤，導致全部看似正確，**
+**卻相同錯誤上線。**
+
+---
+
+## 中間增加紅色虛線重點框
+
+文字：
+
+# \*\*AI 可能建立一套
+
+「內部一致、外部錯誤」的
+Requirement → Code → Test → Oracle。\*\*
+
+其中：
+
+**「內部一致、外部錯誤」**
+
+必須用更醒目的紅色粗體。
+
+---
+
+## 再放一個流程示意
+
+標題：
+
+**Code → Test → Expected Result**
+
+下面使用三個扁平化 Icon：
+
+**藍色 Code \</> Icon**
+**→**
+**綠色 Checklist / Test Icon**
+**→**
+**紫色 Checkmark / Expected Result Icon**
+
+下面紅字：
+
+**若來自同一個錯誤源頭，**
+**可能全部 PASS，但仍然錯。**
+
+---
+
+## 右側最底部
+
+使用 Light Bulb / Warning Idea Icon。
+
+紅色重點：
+
+# \*\*最大的風險不是 AI 會犯錯，
+
+而是「產生答案」與
+「驗證答案」失去獨立性。\*\*
+
+---
+
+# 5. 治理、可重現性與追溯風險
+
+使用 **棕色 / Brown**。
+
+標題：
+
+**治理、可重現性與追溯風險**
+
+英文：
+
+**Governance, Reproducibility & Traceability Risks**
+
+包含：
+
+### 1. 缺乏可追溯性，只能標「AI Generated」不夠信賴
+
+列出：
+
+**Prompt、Context、Model Version、Model Config、Tool / Dependency、Human Modification、Review、Test Evidence**
+
+說明：
+
+**如果沒有完整紀錄，發生問題時難以進行 Root Cause Analysis。**
+
+---
+
+### 2. 缺乏可重現性：同環境 OK，下一次不一定相同
+
+說明：
+
+**Dependency、Prompt、Context、Model Version、RAG Context 的差異，可能造成 Non-determinism / Model Drift。**
+
+---
+
+### 3. Automation Bias / Review Fatigue
+
+說明：
+
+**AI 大量產生 Code、Test、Document、Review Comment，可能降低人工審查的獨立判斷能力，讓真正重要的錯誤更容易被忽略。**
+
+---
+
+# 6. 資料與隱私風險
+
+使用 **青藍色 Cyan / Teal**。
+
+標題：
+
+**資料與隱私風險**
+
+英文：
+
+**Data & Privacy Risks**
+
+包含：
+
+### 1. AI 使用過程本身可能造成資料外洩或不當使用
+
+右側列：
+
+**Source Code、Production Log、PII、Token、Password、Private Key、商業機密、智慧財產。**
+
+---
+
+# 7. Agent 與自動化風險
+
+使用 **紫色 Purple**。
+
+標題：
+
+**Agent 與自動化風險**
+
+英文：
+
+**Agent & Automation Risks**
+
+包含：
+
+### 1. AI Agent 結果不只會產生 Code，而是可以執行、能操作
+
+說明：
+
+**Agent 具有開發、部署、變更 Dependency、修改 CI/CD、Commit、Push 等能力，一旦被誤導，可能造成更大範圍的影響。**
+
+列出：
+
+**Prompt Injection / Indirect Prompt Injection**
+
+以及：
+
+**誤操作、錯誤部署、非授權變更**
+
+右下角使用數個紫色小卡：
+
+- Agent Permission
+- Tool Access
+- Prompt Injection
+- Context Gap
+- Error Mask
+
+上方小字：
+
+**開發風險面向**
+
+---
+
+# 七、底部左側：核心結論
+
+底部約 55%～58% 寬度放置深藍色＋白色資訊區塊。
+
+左側深藍色區：
+
+Target Icon
+
+白色大字：
+
+# **核心結論**
+
+右側放三個橫向觀點卡。
+
+---
+
+## 第一格
+
+Speedometer / Speed Icon
+
+文字：
+
+**GenAI 可以快速產生 Code、Test、Expected Result 與 Documentation，**
+**但它們可能共享同一個錯誤。**
+
+---
+
+## 第二格
+
+Shield Icon
+
+文字：
+
+**測試的目標不只是測試東西「能用」，**
+**而是識別沒有預期到的「真正重要的風險」。**
+
+---
+
+## 第三格
+
+Brain / AI Icon
+
+文字：
+
+**GenAI 沒有絕對的安全邊界，**
+**它改變的是風險生態位。**
+
+其中：
+
+**風險生態位**
+
+使用黃色 Highlight。
+
+---
+
+# 八、底部大型核心金句
+
+使用白色框、深藍色外框。
+
+內容：
+
+# \*\*「以前 Testing 是防止人寫錯；
+
+GenAI 時代，Testing 還必須防止 AI 很有自信地一起把
+Code、Test、Expected Result 都寫錯。」\*\*
+
+其中：
+
+**防止 AI 很有自信地一起把**
+
+以及：
+
+# **Code、Test、Expected Result 都寫錯**
+
+使用鮮紅色粗體。
+
+---
+
+## 在金句下方增加第二條核心結論
+
+使用紅色星號與紅色文字：
+
+# **★ GenAI Testing 的關鍵不是產生更多 Test，而是建立獨立的 Verification Evidence。 ★**
+
+這句必須十分醒目，但尺寸略小於上方主要金句。
+
+---
+
+# 九、底部右側：GenAI 產物完整追溯鏈
+
+建立一個大型白底、深藍邊框、圓角矩形。
+
+上方深藍色膠囊型標題：
+
+# **GenAI 產物的完整追溯鏈（Provenance）**
+
+下方以 Icon + Arrow 水平排列：
+
+**Requirement**
+**→ Prompt**
+**→ Context**
+**→ Model / Version / Config**
+**→ Tool / Dependency**
+**→ Generated Artifact**
+**→ Human Modification**
+**→ Review**
+**→ Test Evidence**
+**→ Release**
+
+對應 Icon：
+
+1. Requirement：文件 Icon
+2. Prompt：對話泡泡 Icon
+3. Context：Database Icon
+4. Model / Version / Config：Cube Icon
+5. Tool / Dependency：Tools / Wrench Icon
+6. Generated Artifact：Code Icon
+7. Human Modification：Human Icon
+8. Review：Checklist Icon
+9. Test Evidence：Laboratory Flask Icon
+10. Release：Rocket Icon
+
+所有 Icon 使用深藍色 Outline Vector Style。
+
+---
+
+# 十、設計層級要求
+
+整張圖的閱讀順序必須非常明確：
+
+**Scope**
+**→ GenAI Testing 主題**
+**→ 7 Risk Categories**
+**→ Testing & Oracle Risks**
+**→ Common-Mode Failure**
+**→ Independent Verification**
+**→ Provenance**
+
+視覺重點順位：
+
+1. **GenAI 時代下，測試需要管理的新風險**
+2. **Testing & Oracle Risks**
+3. **Common-Mode Failure**
+4. **內部一致、外部錯誤**
+5. **Code + Test + Expected Result 都可能一起錯**
+6. **Verification Evidence**
+7. **Provenance**
+
+---
+
+# 十一、整體核心論述
+
+整張圖必須讓觀眾一眼理解：
+
+**GenAI 帶來的不只是 New Risk，也會 Amplify Existing Risk。**
+
+接著呈現：
+
+**GenAI 提高產生 Code、Test、Expected Result 的速度，**
+**但如果 Requirement Interpretation、Implementation、Test 與 Oracle 都來自相同 AI 或相同 Context，**
+**就可能產生 Common-Mode Failure。**
+
+也就是：
+
+**Requirement 被理解錯**
+**→ Code 忠實實作錯誤理解**
+**→ Test 忠實驗證錯誤實作**
+**→ Expected Result 也依照相同錯誤產生**
+**→ Tests 全部 PASS**
+**→ Product 仍然是錯的**
+
+因此最後必須導向：
+
+# \*\*GenAI Testing 的核心，不是產生更多 Test，
+
+而是建立獨立的 Verification Evidence。\*\*
+
+---
+
+# 十二、視覺品質要求
+
+- 16:9
+- 4K
+- Ultra High Resolution
+- Professional Enterprise Presentation
+- Technology Risk Governance Infographic
+- Cybersecurity / Software Engineering Visual Language
+- Clean White Background
+- Flat Vector Icons
+- Thin Connector Lines
+- Rounded Rectangles
+- Strong Information Hierarchy
+- Crisp Typography
+- Dense but Organized
+- Plenty of White Space
+- Consultant-quality Slide
+- High readability
+- Traditional Chinese only
+- English technical terms保持原文
+- 不要照片
+- 不要寫實人物
+- 不要花俏漸層
+- 不要過度陰影
+- 不要漫畫風
+- 不要 3D
+- 不要簡體字
+- 不要亂碼
+- 不要省略文字
+
+最終成品應像一張可以直接放進企業內訓、Software QA、GenAI Governance、AI-assisted Development、Testing Strategy 簡報中的 **高階總覽架構圖**。
